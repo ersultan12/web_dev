@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.head0{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 55px;
+}
+.head01{
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    display: block;
+    width: 103px;
+    padding: 28px 30px 16px 34px;
+}
