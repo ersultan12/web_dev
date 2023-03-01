@@ -1,0 +1,18 @@
+.category-list {
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.category-items {
+    display: flex;
+}
+
+a {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}

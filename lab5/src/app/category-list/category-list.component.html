@@ -1,0 +1,13 @@
+<div class="category-items">
+    <div *ngFor="let category of categories" class="category-list">
+
+        <h3>
+          <a
+          [title]="category.name + ' alerts'"
+          routerLink="/categories/{{category.name}}"
+          >
+            {{ category.name }}
+          </a>
+        </h3>
+      </div>
+</div>
