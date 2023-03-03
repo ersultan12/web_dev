@@ -1,27 +1,24 @@
 <h2>Products</h2>
 
-<div class="main">
-<div *ngFor="let product of products">
+<div *ngFor="let product of products" class="item ">
+
   <h3>
-    <a 
-    [href]="product.url" target="_blank"
-    [title]="product.name + ' details'">
+    <!-- [href]="product.url" target="_blank" -->
+    <a
+    [title]="product.name + ' details'"
+    routerLink="/categories/{{product.categoryName}}/products//{{product.id}}"
+    >
       {{ product.name }}
     </a>
   </h3>
-  <img [src]="product.img_url" alt="phone" width="300px">
-  <p *ngIf="product.description">
+
+  <img [src]="product.img_url[0]" [alt]="product.name" width="300px">
+
+  <p *ngIf="product.description" class="description">
     Description: {{ product.description }}
   </p>
-    <p *ngIf="product.price" class = price>
-      price: {{product.price}} ₸
-    </p>
-  <button type="button" (click)="share()">
-    Share
-  </button>
-  
 
-
-  
-</div>
+    <button type="button" (click)="share(product.name, product.url)">
+        Share
+    </button>
 </div>

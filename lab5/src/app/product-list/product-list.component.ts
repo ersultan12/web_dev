@@ -1,27 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import { products } from '../products';
+import { Product, products} from '../products';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent {
-  products = products;
 
-  share() {
-    window.open(`https://t.me/yers_tk`);
-  }
-  onNotify() {
-    window.alert('You will be notified when the product goes on sale');
+export class ProductListComponent implements OnInit {
+
+  constructor(
+    private route: ActivatedRoute,
+  ) {}
+
+  products?: Product[];
+
+  share(name: string, url: string) {
+    window.open(`https://t.me/share/url?url=${url}&text=${name}`)
   }
 
+  ngOnInit() {
+    // First get the product id from the current route.
+    const routeParams = this.route.snapshot.paramMap;
+    const productCategory = String(routeParams.get('name'));
+    //console.log(productCategory)
+  
+    // Find the product that correspond with the id provided in route.
+    this.products = products.filter(product => product.categoryName === productCategory);
+    //console.log(productIdFromRoute)
+    //console.log(this.products)
+  }
 }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
