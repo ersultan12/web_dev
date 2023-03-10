@@ -125,6 +125,7 @@
     flex-wrap:wrap;
   }
   .photo {
+    background-color: #26425B;
     margin: 5px;
     border: 1px solid;
     width: 400px;
