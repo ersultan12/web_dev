@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { AlbumsComponent } from './albums/albums.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AboutComponent } from './about/about.component';
     AppComponent,
     TopBarComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    AlbumsComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import { AboutComponent } from './about/about.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent},
       { path: 'about', component: AboutComponent },
+      { path: 'albums', component: AlbumsComponent },
     ])
   ],
   providers: [],

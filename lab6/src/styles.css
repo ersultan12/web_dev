@@ -1,6 +1,6 @@
 * {
     font-family: 'Roboto', Arial, sans-serif;
-    color: #616161;
+    color: #fff;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -110,7 +110,11 @@
     border: 1px solid;
     border-radius: 20px;
     width: 20%;
-    margin: 5px;
+    background-color: #26425B;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   #albums {
     display:flex;
