@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     TopBarComponent,
     HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent},
+      { path: 'about', component: AboutComponent },
     ])
   ],
   providers: [],
