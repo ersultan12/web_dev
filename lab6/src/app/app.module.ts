@@ -10,6 +10,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AlbumsComponent } from './albums/albums.component';
+import { AlbumDetailComponent } from './album-detail/album-detail.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { AlbumsComponent } from './albums/albums.component';
     HomeComponent,
     AboutComponent,
     AlbumsComponent,
+    AlbumDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { AlbumsComponent } from './albums/albums.component';
       { path: '', component: HomeComponent},
       { path: 'about', component: AboutComponent },
       { path: 'albums', component: AlbumsComponent },
+      { path: 'albums/:id', component: AlbumDetailComponent },
     ])
   ],
   providers: [],
