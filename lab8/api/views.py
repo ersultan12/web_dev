@@ -35,7 +35,7 @@ def cat_detail(request, *args, **kwargs):
 
 def products_by_cat(request, *args, **kwargs):
     cat_id = kwargs['id']
-    products = Product.objects.all().filter(category=cat_id)
+    products = Product.objects.filter(category=cat_id)
     products_json = [p.to_json() for p in products]
     return JsonResponse(products_json, safe=False)
 

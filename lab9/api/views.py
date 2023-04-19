@@ -40,7 +40,7 @@ def vacancies_top_ten(request):
 
 
 def vacancies_by_company(request, *args, **kwargs):
-    cmp_id = kwargs['id']
+    cmp_id = kwargs['company_id']
     vacancies = Vacancy.objects.all().filter(company=cmp_id)
     vacancies_json = [v.to_json() for v in vacancies]
     return JsonResponse(vacancies_json, safe=False)
